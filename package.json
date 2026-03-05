@@ -1,5 +1,5 @@
 {
-  "name": "tiny-async",
+  "name": "tiny-async-kit",
   "version": "1.0.0",
   "description": "All tiny-* async utilities in one package. Drop-in replacements for p-limit, p-map, p-retry, p-queue. ESM + CJS, zero transitive dependencies.",
   "type": "module",
@@ -96,10 +96,10 @@
   },
   "homepage": "https://github.com/ofershap/tiny-async#readme",
   "dependencies": {
-    "tiny-limit": "^1.1.0",
-    "tiny-map": "^1.0.0",
-    "tiny-retry": "^1.0.0",
-    "tiny-queue": "^1.0.0"
+    "map-tiny": "^1.0.0",
+    "queue-tiny": "^1.0.0",
+    "retry-tiny": "^1.0.0",
+    "tiny-limit": "^1.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

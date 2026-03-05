@@ -1,7 +1,7 @@
 # tiny-async
 
-[![npm version](https://img.shields.io/npm/v/tiny-async.svg)](https://www.npmjs.com/package/tiny-async)
-[![npm downloads](https://img.shields.io/npm/dm/tiny-async.svg)](https://www.npmjs.com/package/tiny-async)
+[![npm version](https://img.shields.io/npm/v/tiny-async-kit.svg)](https://www.npmjs.com/package/tiny-async-kit)
+[![npm downloads](https://img.shields.io/npm/dm/tiny-async-kit.svg)](https://www.npmjs.com/package/tiny-async-kit)
 [![CI](https://github.com/ofershap/tiny-async/actions/workflows/ci.yml/badge.svg)](https://github.com/ofershap/tiny-async/actions/workflows/ci.yml)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -9,7 +9,7 @@
 All tiny-\* async utilities in one package. Drop-in replacements for `p-limit`, `p-map`, `p-retry`, and `p-queue` that ship ESM + CJS.
 
 ```ts
-import { pLimit, pMap, pRetry, PQueue } from "tiny-async";
+import { pLimit, pMap, pRetry, PQueue } from "tiny-async-kit";
 ```
 
 > One install. Four utilities. All dual-format, all typed, all zero-dep individually.
@@ -17,7 +17,7 @@ import { pLimit, pMap, pRetry, PQueue } from "tiny-async";
 ## Install
 
 ```bash
-npm install tiny-async
+npm install tiny-async-kit
 ```
 
 ## What's included
@@ -36,7 +36,7 @@ Each utility is also available as a standalone package if you only need one.
 ### Limit concurrency
 
 ```ts
-import { pLimit } from "tiny-async";
+import { pLimit } from "tiny-async-kit";
 
 const limit = pLimit(5);
 const results = await Promise.all(urls.map((url) => limit(() => fetch(url))));
@@ -45,7 +45,7 @@ const results = await Promise.all(urls.map((url) => limit(() => fetch(url))));
 ### Map with concurrency
 
 ```ts
-import { pMap } from "tiny-async";
+import { pMap } from "tiny-async-kit";
 
 const pages = await pMap(urls, (url) => fetch(url).then((r) => r.text()), {
   concurrency: 10,
@@ -55,7 +55,7 @@ const pages = await pMap(urls, (url) => fetch(url).then((r) => r.text()), {
 ### Retry with backoff
 
 ```ts
-import { pRetry } from "tiny-async";
+import { pRetry } from "tiny-async-kit";
 
 const data = await pRetry(() => fetchFromUnreliableAPI(), { retries: 3 });
 ```
@@ -63,7 +63,7 @@ const data = await pRetry(() => fetchFromUnreliableAPI(), { retries: 3 });
 ### Task queue with priority
 
 ```ts
-import { PQueue } from "tiny-async";
+import { PQueue } from "tiny-async-kit";
 
 const queue = new PQueue({ concurrency: 2 });
 await queue.add(() => processJob(1));
@@ -87,7 +87,7 @@ The tiny-\* packages ship both ESM and CJS, include TypeScript types, and have z
 | [tiny-queue](https://github.com/ofershap/tiny-queue)   | p-queue              | Priority task queue            |
 | [tiny-ms](https://github.com/ofershap/tiny-ms)         | ms                   | Parse/format durations         |
 | [tiny-escape](https://github.com/ofershap/tiny-escape) | escape-string-regexp | Escape regex chars             |
-| **tiny-async**                                         | all of the above     | One import for all async utils |
+| **tiny-async-kit**                                     | all of the above     | One import for all async utils |
 
 ## Author
 

@@ -1,11 +1,11 @@
 export { pLimit } from "tiny-limit";
 export type { LimitFunction } from "tiny-limit";
 
-export { pMap, pMapSkip } from "tiny-map";
-export type { Options as MapOptions } from "tiny-map";
+export { pMap, pMapSkip } from "map-tiny";
+export type { Options as MapOptions } from "map-tiny";
 
-export { pRetry, AbortError } from "tiny-retry";
-export type { Options as RetryOptions, FailedAttemptError } from "tiny-retry";
+export { pRetry, AbortError } from "retry-tiny";
+export type { Options as RetryOptions, FailedAttemptError } from "retry-tiny";
 
-export { PQueue } from "tiny-queue";
-export type { QueueOptions, AddOptions } from "tiny-queue";
+export { PQueue } from "queue-tiny";
+export type { QueueOptions, AddOptions } from "queue-tiny";

@@ -100,6 +100,10 @@ The tiny-\* packages ship both ESM and CJS, include TypeScript types, and have z
 
 If this saved you from `ERR_REQUIRE_ESM`, [star the repo](https://github.com/ofershap/tiny-async) or [open an issue](https://github.com/ofershap/tiny-async/issues) if something breaks.
 
+---
+
+<sub>README built with [README Builder](https://ofershap.github.io/readme-builder/)</sub>
+
 ## License
 
 [MIT](LICENSE) &copy; [Ofer Shapira](https://github.com/ofershap)
